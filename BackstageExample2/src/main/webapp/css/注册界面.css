@@ -1,0 +1,126 @@
+body {
+    /* background: #cccccc; */
+    background: url(../images/背景图1.jpg) 5px 5px;
+}
+
+.container {
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #2289F0;
+    padding: 15px;
+    margin: 50px auto 0px;
+    width: 800px;
+    text-align: center;
+    font-family: "微软雅黑 Light";
+    box-shadow: 10px 10px 15px black;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+
+hr {
+    width: 80%;
+    border: #2289F0 1px solid;
+    margin-bottom: 15px;
+}
+
+/* 表单 */
+#form1 div {
+    /* border: #00c8D0 solid 1px; */
+    margin-left: 50px;
+    width: 500px;
+    left: 30%;
+    transform: translateX(30%);
+    text-align: left;
+    /* margin-right: 0; */
+    /* z-index: 0; */
+    /* border: 1px solid red; */
+}
+
+label {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    text-align: justify;
+    text-align-last: justify;
+}
+
+/* 输入框格式 */
+input[type=text],
+input[type=password] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    border-radius: 10px;
+    /* -webkit-transition: 0.5s; */
+    /* 宽度动态增加 */
+    transition: width 0.4s ease-in-out;
+    outline: none;
+}
+
+/* 点击输入框后 */
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: lightblue;
+    width: 30%;
+}
+
+input[type=radio] {
+    margin: 8px 0;
+}
+
+#select_province {
+    margin: 8px 0;
+}
+
+/* 按钮设计 */
+input[type=button] {
+    width: 120px;
+    height: 40px;
+    background: #2289F0;
+    border: 0px;
+    color: white;
+    margin: 10px;
+    font-size: 18px;
+    font-family: "微软雅黑 Light";
+    font-weight: bold;
+}
+
+input[type=button]:hover {
+    background: #00c8D0;
+}
+/* 上传照片按钮设计 */
+/* #get_photo{
+    display: inline-block;
+} */
+/* #photo{
+    width: 30px;
+    height:40px;
+    opacity:0;
+    cursor:pointer;
+    position: absolute;
+} */
+.file0{
+    width: 100px;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    background-color: skyblue;
+    color: white;
+    margin-right: 50%;
+    border: none;
+    border-radius: 10px;
+}
+#more{
+    margin-right: 0;
+    float: right;
+}
+/* 提示信息样式 */
+.span_phone {
+    color: red;
+    font-size: 5px;
+}
+

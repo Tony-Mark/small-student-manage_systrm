@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="">
+   <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.2, minimum-scale=0.8">
+       <title>注册界面</title>
+       <style>
+        @import url("css/注册界面.css");
+        @import url("css/弹出div.css");
+        @import url("css/MyTable.css");
+       </style>
+       <script src="js/jquery-1.8.3.js"></script>
+       <script src="js/界面jquery.js"></script>
+       <script src="js/MyTable.js"></script>
+       <script src="js/注册界面验证.js"></script>
+       <script src="js/地址日期联动.js"></script>
+       <script src="js/弹出div.js"></script>
+   </head>
+   <body onload="setup()">
+        <!-- 总盒子 -->
+        <div class="container" id="popLayer">
+            <h1>注册界面</h1>
+            <hr>
+            <!-- 注册提交表单 需要提交文件，需要使用属性enctype="multipart/form-data"-->
+            <form id="form1" action="register" method="post" autocomplete= "off" enctype="multipart/form-data">
+                <div>
+                    <label for="studentId">学号:</label>
+                    <input type="text" id="studentId" name="studentId">
+                </div>
+                <div>
+                    <label for="user_name">姓名:</label>
+                    <input type="text" id="user_name" name="studentName" onfocusout="text_name_out()">
+                </div>
+                <div>
+                    <label for="user_password">密码:</label>
+                    <input type="password" id="user_password" name="password" onfocusout="text_password_out()">
+                </div>
+                <div>
+                    <label for="user_re_password">重复密码:</label>
+                    <input type="password" id="user_re_password" name="" onfocusout="text_repetition_password()">
+                </div>
+                <div id="div_phone">
+                    <label for="phone">电话:</label>
+                    <input type="text" id="phone" name="phone" onfocus="text_phone_in()" onfocusout="text_phone_out('phone')">
+                </div>
+                <div>
+                    <label for="male">性别:</label>
+                    <input type="radio" name="sex" id="male" value="男" checked="checked">男
+                    <input type="radio" name="sex" id="female" value="女">女
+                </div>
+                <div>
+                    <label for="hobbies">爱好:</label>
+                    <input type="checkbox" name="hobbies" id="hobbies" value="唱">唱
+                    <input type="checkbox" name="hobbies" value="跳">跳
+                    <input type="checkbox" name="hobbies" value="篮球">篮球
+                </div>
+                <div>
+                    <label for="select_province">籍贯:</label>
+                    <select id="select_province" name="address" onchange="select_province_change()">
+                        <option></option>
+                    </select>省
+                    <select id="select_city" name="address">
+                        <option></option>
+                    </select>市/县
+                    <input id="Text1" type="text" name="address">
+                </div>
+                <div>
+                    <label for="select_year">出生日期:</label>
+                    <select id="select_year" name="date" onchange="select_year_change()">
+                        <option></option>
+                    </select>年
+                    <select id="select_month" name="date" onchange="select_month_change()">
+                        <option></option>
+                    </select>月
+                    <select id="select_day" name="date">
+                        <option></option>
+                    </select>日
+                </div>
+                <div>
+                    <label for="note">备注说明:</label>
+                    <input type="text" name="note" id="note">
+                </div>
+                <div id="file_div">
+                    <label for="file1">照片:</label>
+                    <input type="file" class="file0" name="file" id="file1" accept="image/*" onchange="img_see()">
+                    <!-- <button type="button" class="btn" >上传照片</button> -->
+                    <!--<input type="file" class="file0" name="file" id="file2" >-->
+                    <!-- <button type="button" class="btn" >上传文件</button> -->
+                </div>
+            </form>
+            <button class="btn" id="more">更多</button>
+            <input type="button" value="确认信息" id="submit" onclick="form_getAll()">
+        </div>
+        <div id="verifyDiv">
+            <button onclick="closePop('verifyDiv')">ShutDown</button>
+            <div id="verify_text_div">
+
+            </div>
+        </div>
+        <div id="popDiv">
+            <div id="text_div">
+
+            </div>
+            <div class="code_div">
+                <div id="checkCode" class="code"  onclick="changeCode()"></div>
+                <div id="inputCode_div">
+                    <span id="change" onclick="changeCode()">看不清换一换</span>
+                <input type="text" name="code" id="code" onfocus="remove_text_code()">
+                </div>
+            </div>
+            <!-- <button onclick="validateCode()" id="but_submit">Submit</button> -->
+            <button id="but_submit">Submit</button>
+            <button onclick="close_text_div('popDiv')" id="but_close">Close</button>
+        </div>
+   </body>
+</html>

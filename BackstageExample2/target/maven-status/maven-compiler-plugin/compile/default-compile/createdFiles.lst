@@ -1,0 +1,6 @@
+com\xhu\entity\Student.class
+com\xhu\jdbc\utils\JDBCUtils.class
+com\xhu\service\AddCourse.class
+com\xhu\entity\Course.class
+com\xhu\jdbc\utils\RegisterSqlUtil.class
+com\xhu\entity\Grade.class

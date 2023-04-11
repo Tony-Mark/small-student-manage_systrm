@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询学生</title>
+    <style>@import url("css/select.css");</style>
+    <style>@import url("css/MyTable.css");</style>
+    <script src="js/jquery-1.8.3.js"></script>
+    <script src="js/select.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>查询学生</h1>
+    <form>
+        <label for="studentMessage">
+            <input class="condition" type="radio" name="condition" value="studentId">按学号查询
+            <input class="condition" type="radio" name="condition" value="sex">按性别查询
+        </label>
+        <input type="text" id="studentMessage" name="studentMessage"><br><br>
+    </form>
+    <input type="button" id="select" value="查询"><br><br>
+    <div id="select_context">
+
+    </div>
+</div>
+</body>
+<script src="js/MyTable.js"></script>
+</html>

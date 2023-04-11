@@ -1,0 +1,121 @@
+#popDiv {
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    z-index: 11;
+    width: 50%;
+    height: 70%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 15px 15px 15px black;
+    margin-top: 11%;
+}
+#popDiv #text_div{
+    text-align: justify;
+    border: #0fd850 1px solid;
+}
+/* 未按要求输入提示 */
+#verifyDiv {
+    display: none;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 11;
+    height: 30%;
+    width: 40%;
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+#verifyDiv button, #popDiv button {
+    float: right;
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+}
+#popDiv #but_submit{
+    margin-right: 20%;
+    margin-top: 10%;
+}
+#popDiv #but_close{
+    margin-right:20%;
+    margin-top: 10%;
+}
+#verifyDiv button::before , #popDiv button::before{
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+}
+
+#verifyDiv button:hover::before , #popDiv button:hover::before{
+    width: 9em;
+}
+/* 提示信息文本样式 */
+#text{
+    padding-top: 3em;
+    text-align: center;
+    color: red;
+    font-size: 16px;
+}
+/* 取信息文本样式 */
+#text_div p{
+    color:#63df1b;
+    font-size: 16px;
+}
+/* 验证码区域 */
+.code {
+    font-family: Arial;
+    font-style: italic;
+    color: blue;
+    font-size: 30px;
+    border: 0;
+    padding: 2px 3px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    /* float: left; */
+    margin: auto;
+    margin-left: 40%;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #D8B7E3;
+}
+
+span {
+    text-decoration: none;
+    font-size: 12px;
+    color: #288bc4;
+    padding-left: 10px;
+}
+
+span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.code_div{
+    text-align: center;
+}

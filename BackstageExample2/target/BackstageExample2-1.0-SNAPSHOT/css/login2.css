@@ -1,0 +1,99 @@
+body {
+	background: url("../images/背景4.jpg") 5px 5px;
+}
+
+/* 用户登录界面 */
+#div1 {
+	width: 420px;
+	height: 400px;
+	/* background-color: ; */
+	background: rgba(255, 255, 255, 0.3);
+	position: absolute;
+	left: 40%;
+	top: 18%;
+	z-index: -1;
+	/* box-shadow: 10px 10px 15px black; */
+	padding: 15px;
+	margin: 50px auto 0px;
+	border-radius: 20px;
+	border: 1px white solid;
+}
+
+#divhead {
+	position: relative;
+	left: 35%;
+	width: 130px;
+	height: 120px;
+	background: url("../images/头像3.jpg");
+	background-size: cover;
+	border-radius: 50%;
+
+}
+
+/* 输入框格式 */
+input[type=text],
+input[type=password] {
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 1px solid #ffffff;
+	border-radius: 30px;
+	position: relative;
+	left: 40px;
+	background: rgba(255, 255, 255, 0.1);
+	color: white;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+}
+
+/* 点击输入框后 */
+input[type=text]:focus,
+input[type=password]:focus {
+	background-color: lightblue;
+}
+
+/* 按钮设计 */
+input[type=button] {
+	border-radius: 20px;
+	position: relative;
+	left: 70px;
+	width: 130px;
+	height: 40px;
+	background: white;
+	border: 0px;
+	color: black;
+	margin: 10px;
+	font-size: 18px;
+	font-family: "微软雅黑 Light";
+	font-weight: bold;
+}
+
+input[type=button]:hover {
+	background: #cfcf9b;
+}
+
+.message {
+	color: red;
+	position: relative;
+	left: 40px;
+	margin-left: 10px;
+}
+
+label {
+	display: inline-block;
+	width: 90px;
+	height: 40px;
+	text-align: justify;
+	text-align-last: justify;
+	position: relative;
+	left: 30px;
+}
+a{
+	position: relative;
+	float: right;
+	top: 80px;
+}
+a:hover{
+	color: #13d283;
+}

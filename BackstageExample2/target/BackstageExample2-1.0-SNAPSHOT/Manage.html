@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<title>菜单页面</title>
+		<style>@import url("css/Manage.css");</style>
+		<style>@import url("css/clock.css");</style>
+		<script src="js/jquery-1.8.3.js"></script>
+		<script src="js/Manage.js"></script>
+		<script src="js/clock.js"></script>
+
+	</head>
+	<body>
+		<hr />
+		<ul class="nav">
+			<li class="menu-item" id="firstPage"><a href="#">首页</a>
+
+			</li>
+			<li class="menu-item"><a href="#">数据入库</a>
+				<ul class="sub-menu">
+					<li id="add-course">-添加课程</li>
+					<li id="add-grade">-添加成绩</li>
+				</ul>
+			</li>
+			<li class="menu-item"><a href="#">数据修改</a>
+				<ul class="sub-menu">
+					<li >-修改课程</li>
+					<li >-修改成绩</li>
+				</ul>
+			</li>
+			<li class="menu-item"><a href="#">数据删除</a>
+				<ul class="sub-menu">
+					<li >-删除课程</li>
+					<li >-删除成绩</li>
+				</ul>
+			</li>
+			<li class="menu-item"><a href="#">数据查询</a>
+				<ul class="sub-menu">
+					<li id="select-student">-学生查询</li>
+					<li>-课程查询</li>
+					<li>-成绩查询</li>
+				</ul>
+			</li>
+		</ul>
+		<div id="title"></div>
+		<!--嵌套网页-->
+		<div id="container">
+
+		</div>
+	</body>
+</html>
