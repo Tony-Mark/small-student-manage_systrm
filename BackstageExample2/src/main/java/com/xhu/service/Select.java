@@ -32,6 +32,7 @@ public class Select extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RegisterSqlUtil.setCode(request, response);
 		PrintWriter out0 = response.getWriter();
 		Connection connection = JDBCUtils.getConnection();
 		ResultSet rs = null;
@@ -55,20 +56,21 @@ public class Select extends HttpServlet {
 				rs = JDBCUtils.preparedSqlForSelect(sqlSelectForId, message);
 				/*studentBeanHandler.handle(rs)将结果集封装成一个对象,直接将对象转换为JSON数组*/
 				// json.append(JSONObject.toJSONString(studentBeanHandler.handle(rs)));
-				RegisterSqlUtil.modelToJsonArray(studentBeanHandler.handle(rs).toArray(), jsonArray);
+				// RegisterSqlUtil.modelToJsonArray(studentBeanHandler.handle(rs).toArray(), jsonArray);
+				RegisterSqlUtil.resultSetToJson(rs, jsonArray);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}else{
 			try {
 				rs = JDBCUtils.preparedSqlForSelect(sqlSelectForSex, message);
-				RegisterSqlUtil.modelToJsonArray(studentBeanHandler.handle(rs).toArray(), jsonArray);
+				// RegisterSqlUtil.modelToJsonArray(studentBeanHandler.handle(rs).toArray(), jsonArray);
+				RegisterSqlUtil.resultSetToJson(rs, jsonArray);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
 		out0.println(jsonArray);
-		System.out.println(jsonArray);
 		JDBCUtils.close(rs, connection);
 		out0.flush();
 		out0.close();
